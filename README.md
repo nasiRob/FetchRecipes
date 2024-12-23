@@ -57,4 +57,5 @@ esstially more time would have been needed. I would go on to say that this would
 ### Additional Information: Is there anything else we should know? Feel free to share any insights or constraints you encountered
 
 - **Future Plans**: Intend to implement a dynamic data cleanup mechanism to handle a larger cache size more efficiently. Further improvements in error handling and user feedback are also planned.
+- Logging could have created a protocol but decided against it.. But essentially everyone logs errors and warnings differently but we would have wanted to set that up
 
