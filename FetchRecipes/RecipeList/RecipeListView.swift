@@ -24,7 +24,7 @@ struct RecipeListView: View {
                     })
                 }
                 .toolbar {
-                    ToolbarItemGroup(placement: .navigationBarLeading) {
+                    ToolbarItemGroup(placement: .topBarTrailing) {
                         Button(action: {
                             // Action to present filter options
                             showSort = false
@@ -40,9 +40,6 @@ struct RecipeListView: View {
                         }) {
                             Text("Sort")
                         }
-                    }
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        
                     }
                 }
                 .actionSheet(isPresented: $isFilterPresented, content: {

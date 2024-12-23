@@ -15,8 +15,7 @@ struct RecipeGridView: View {
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
-                LazyVGrid(columns:[.init(.flexible(minimum: 100, maximum: 200)),
-                                   .init(.flexible(minimum: 100, maximum: 200))] , spacing: 5) {            ForEach(viewModel.recipes) { recipe in
+                LazyVGrid(columns:[.init(.adaptive(minimum: 150, maximum: 500))] , spacing: 5) {            ForEach(viewModel.recipes) { recipe in
                                        NavigationLink(value: recipe) {
                                            recipeGridView(recipe: recipe)
                                        }
