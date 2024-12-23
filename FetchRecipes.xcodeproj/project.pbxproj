@@ -24,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BDF1800A2D19F44500DE0EC4 /* FetchRecipesTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = FetchRecipesTests.xctestplan; sourceTree = "<group>"; };
 		BDF30CCD2D187B2A006E7D08 /* FetchRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF30CE42D187B2C006E7D08 /* FetchRecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF30CEE2D187B2C006E7D08 /* FetchRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,10 +89,11 @@
 		BDF30CC42D187B2A006E7D08 = {
 			isa = PBXGroup;
 			children = (
-				BDF30CCF2D187B2A006E7D08 /* FetchRecipes */,
+				BDF1800A2D19F44500DE0EC4 /* FetchRecipesTests.xctestplan */,
 				BDF30CE72D187B2C006E7D08 /* FetchRecipesTests */,
 				BDF30CF12D187B2C006E7D08 /* FetchRecipesUITests */,
 				BDF30CCE2D187B2A006E7D08 /* Products */,
+				BDF30CCF2D187B2A006E7D08 /* FetchRecipes */,
 			);
 			sourceTree = "<group>";
 		};

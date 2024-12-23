@@ -4,7 +4,14 @@
 <dict>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>audio</string>
+		<string>fetch</string>
+		<string>processing</string>
 		<string>remote-notification</string>
 	</array>
+	<key>com.apple.developer.web-browser-engine.rendering</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict/>
 </dict>
 </plist>

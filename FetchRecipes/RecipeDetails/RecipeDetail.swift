@@ -27,28 +27,34 @@ struct RecipeDetail: View {
         }
         .navigationTitle(recipe.name)
         .onAppear {
-            withAnimation {
+                viewModel.fetchImage()
                 viewModel.fetchMetadata()
-            }
         }
     }
     
     @ViewBuilder
     func recipeImage() -> some View {
-        if let photoUrl = recipe.photoUrlLarge {
-            AsyncImage(url: URL(string: photoUrl), scale: 100, content: { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-            }, placeholder: {
-                
-            })
-            .onTapGesture {
-                if let sourceUrl = recipe.sourceUrl {
-                    UIApplication.shared.open(URL(string: sourceUrl)!)
-                }
-
+        Group {
+            if let photoData = viewModel.data {
+                Image(uiImage: UIImage(data: photoData) ?? recipePlaceHolderImage)
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(8)
+            } else {
+                Image(uiImage: recipePlaceHolderImage)
+                    .resizable()
+                    .scaledToFit()
             }
         }
+        .onTapGesture {
+            if let sourceUrl = recipe.sourceUrl {
+                UIApplication.shared.open(URL(string: sourceUrl)!)
+            }
+        }
+    }
+    
+    var recipePlaceHolderImage: UIImage {
+        return UIImage(systemName: "photo.fill") ?? .remove
     }
     
     @ViewBuilder
@@ -80,7 +86,9 @@ struct RecipeDetail: View {
                         }
                         .translationPresentation(isPresented: $showTranslation,
                                                  text: summary ){ translatedText in
-                            viewModel.summary = translatedText
+                            withAnimation {
+                                viewModel.summary = translatedText
+                            }
                         }
                 }
                 Spacer()
