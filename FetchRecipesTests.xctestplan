@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "F2961A3E-8F75-4B6B-8B92-A976083F9F92",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:FetchRecipes.xcodeproj",
+        "identifier" : "BDF30CE32D187B2C006E7D08",
+        "name" : "FetchRecipesTests"
+      }
+    }
+  ],
+  "version" : 1
+}
